@@ -17,8 +17,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="styles/signup.css">
-
+    <link rel="stylesheet" href="styles/signup/signup.css">
+    <link rel="stylesheet" href="styles/signup/auth-header.css">
+    <link rel="stylesheet" href="styles/signup/signup-responsive.css">
 </head>
 
 <body>
@@ -30,7 +31,7 @@
                 <img src="images/logo.png" alt="F-Sphere logo" class="logo">
 
             </div>
-            
+
             <h1 class="project-name">F-Sphere</h1>
 
             <span>The Frontend Developers' Space</span>
@@ -66,7 +67,7 @@
                 </div>
 
 
-                <div class="input-group">
+                <div class="input-group" id="gamil-input">
 
                     <span class="material-symbols-outlined">
                         mail
@@ -87,6 +88,10 @@
                     <input type="password" id="password" name="password" placeholder="Create a password"
                         autocomplete="new-password" required>
 
+                    <span class="material-symbols-outlined">
+                        visibility
+                    </span>
+
                 </div>
 
 
@@ -98,6 +103,11 @@
 
                     <input type="password" id="confirm-password" name="confirm-password"
                         placeholder="Confirm your password" autocomplete="new-password" required>
+
+                    <span class="material-symbols-outlined">
+                        visibility
+                    </span>
+
 
                 </div>
 
@@ -132,12 +142,13 @@
                 <span>Continue with Google</span>
 
             </button>
-
-
-            <p class="signin-link">
-                Already have an account?
-                <a href="login.html">Sign In</a>
-            </p>
+            
+            <div class="signin-link-container">
+                <p class="signin-link">
+                    Already have an account?
+                    <a href="login.html">Sign In</a>
+                </p>
+            </div>
 
         </section>
 

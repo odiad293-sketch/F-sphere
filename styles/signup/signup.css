@@ -100,7 +100,7 @@ main {
     background-color: #ddd;
 }
 
-.google-signin {
+.google-signup {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -116,7 +116,7 @@ main {
     transition: 0.4s ease;
 }
 
-.google-signin:hover {
+.google-signup:hover {
     background-color: white;
     color: #1207b1;
     border: 1px solid #1207b1;
@@ -124,7 +124,7 @@ main {
     transform: translateY(-2px);
 }
 
-.google-signin:active {
+.google-signup:active {
     background-color: #1207b1;
     color: white;
     border: none;
@@ -138,9 +138,10 @@ main {
     transform: scale(0.97);
 }
 
-.signin-link {
+.signup-link {
     font-size: 14px;
     color: #6b6a6a;
+    font-weight: 500;
     text-decoration: none;
     transition: 0.4s ease;
     display: flex;
@@ -149,6 +150,6 @@ main {
     margin-top: 10px;
 }
 
-.signin-link:hover {
+.signup-link:hover {
     text-decoration: underline;
 }

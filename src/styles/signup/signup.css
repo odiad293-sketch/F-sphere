@@ -47,8 +47,6 @@ main {
     width: 100%;
 }
 
-#gamil-input {}
-
 #signup-form input:focus {
     outline: none;
     box-shadow: 2px 1px 4px #1207b1;
@@ -153,3 +151,4 @@ main {
 .signup-link:hover {
     text-decoration: underline;
 }
+

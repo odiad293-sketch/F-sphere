@@ -2,7 +2,15 @@ export function renderSignupPage() {
     let main = document.querySelector('main');
     let header = document.querySelector('header');
 
-    let renderFormHTML = `  <section class="signup-form">
+    let renderFormHTML = ` 
+    <div class="overlay">
+        <div class="loading-container">
+            <div class="spiner"></div>
+            <p>loading...</p>
+        </div>
+    </div>
+
+    <section class="signup-form">
 
             <form id="signup-form">
 
@@ -152,4 +160,14 @@ export function passwordVisibilityToggle() {
             confirmPasswordVisibilityIcon.textContent = 'visibility';
         }
     })
+}
+
+export function lodingState(state){
+    const overlay = document.querySelector(".overlay");
+    if(state === true){
+       overlay.style.display="block";
+    }
+    else{
+        overlay.style.display="none";
+    }
 }

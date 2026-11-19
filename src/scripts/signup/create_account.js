@@ -1,18 +1,22 @@
 import { createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/12.18.0/firebase-auth.js';
 import { setDoc, doc, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js";
 import { auth, db } from '../firebase_config.js';
+import { lodingState }from "./signup_UI.js"
+ let isigning = false;
 export const createAccount = async () => {
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     const confirmPassword = document.getElementById('confirm-password').value;
-
+   
     if (password !== confirmPassword) {
         console.error("Passwords do not match");
         return;
     }
 
     try {
+        isigning = true;
+        lodingState(true)
         const userDoc = await createUserWithEmailAndPassword(
             auth,
             email,
@@ -27,5 +31,8 @@ export const createAccount = async () => {
 
     } catch (error) {
         console.error("Error creating user:", error);
+    } finally{
+       isigning = false;
+       lodingState(false)
     }
 }

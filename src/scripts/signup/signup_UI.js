@@ -9,7 +9,14 @@ export function renderSignupPage() {
             <p>loading...</p>
         </div>
     </div>
+    
+    <div class="message-overlay">
+       <div class="error-message-container">
+        <p>account already exist</p>
+    </div>
 
+    </div>
+   
     <section class="signup-form">
 
             <form id="signup-form">
@@ -171,3 +178,4 @@ export function lodingState(state){
         overlay.style.display="none";
     }
 }
+

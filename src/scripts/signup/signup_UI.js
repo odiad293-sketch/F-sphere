@@ -1,20 +1,13 @@
 export function renderSignupPage() {
     let main = document.querySelector('main');
     let header = document.querySelector('header');
-
+    
     let renderFormHTML = ` 
     <div class="overlay">
         <div class="loading-container">
             <div class="spiner"></div>
             <p>loading...</p>
         </div>
-    </div>
-    
-    <div class="message-overlay">
-       <div class="error-message-container">
-        <p>account already exist</p>
-    </div>
-
     </div>
    
     <section class="signup-form">
@@ -117,7 +110,7 @@ export function renderSignupPage() {
             </div>
 
         </section>`;
-
+    
     let renderHeaderHTML = `  <div class="logo-container">
             <div class="logo">
                 <img src="src/images/logo.png" alt="F-Sphere logo" class="logo">
@@ -129,6 +122,21 @@ export function renderSignupPage() {
             <span>The Frontend Developers' Space</span>
 
         </div>
+      
+      <div class="error-card">
+    <div class="error-icon">
+        !
+    </div>
+
+    <div class="error-content">
+        <h3>Invalid credentials</h3>
+        <p>Please check your email and password.</p>
+    </div>
+
+    <button class="error-close" type="button" aria-label="Close error">
+        &times;
+    </button>
+</div>
 
         <div class="welcome-container">
 
@@ -157,7 +165,7 @@ export function passwordVisibilityToggle() {
             passwordVisibilityIcon.textContent = 'visibility';
         }
     })
-
+    
     confirmPasswordVisibilityIcon.addEventListener('click', () => {
         if (confirmPasswordInput.type === 'password') {
             confirmPasswordInput.type = 'text';
@@ -169,13 +177,12 @@ export function passwordVisibilityToggle() {
     })
 }
 
-export function lodingState(state){
+export function lodingState(state) {
     const overlay = document.querySelector(".overlay");
-    if(state === true){
-       overlay.style.display="block";
+    if (state === true) {
+        overlay.style.display = "block";
     }
-    else{
-        overlay.style.display="none";
+    else {
+        overlay.style.display = "none";
     }
 }
-

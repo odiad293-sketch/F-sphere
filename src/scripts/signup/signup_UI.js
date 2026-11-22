@@ -20,7 +20,18 @@ export function renderSignupPage() {
                         person
                     </span>
 
-                    <input type="text" id="name" name="name" placeholder="Enter your full name" autocomplete="name"
+                    <input type="text" id="name" name="name" placeholder="Enter first name" autocomplete="name"
+                        required>
+
+                </div>
+            
+                <div class="input-group">
+
+                    <span class="material-symbols-outlined">
+                        person
+                    </span>
+
+                    <input type="text" id="name" class="last-name" name="name" placeholder="Enter last name" autocomplete="name"
                         required>
 
                 </div>

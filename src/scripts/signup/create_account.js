@@ -71,6 +71,11 @@ function handleSignupError(error) {
             'Your password is too weak. Please choose a stronger password.'
         );
 
+    } else if (error.code === "auth/password-does-not-meet-requirements") {
+       displaySignupError(
+        "Weak Password", 
+        "Password must contain an upper case character, Password must contain a numeric character, Password must contain a non-alphanumeric character"
+       )
     } else if (error.code === 'auth/operation-not-allowed') {
 
         displaySignupError(
@@ -107,15 +112,16 @@ export const createAccount = async () => {
 
     if (isigning) return;
 
-    const name = document.getElementById('name').value.trim();
+    const fistName = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const password = document.getElementById('password').value;
+    const lastName = document.querySelector("last-name").value;
     const confirmPassword = document.getElementById('confirm-password').value;
 
     hideSignupError();
 
     // Validate name
-    if (!name) {
+    if (!fistName && lastName ) {
         displaySignupError(
             'Name required',
             'Please enter your full name.'
@@ -155,7 +161,8 @@ export const createAccount = async () => {
 
         await setDoc(userRef, {
             email: email,
-            fullName: name,
+            fistName: fistName,
+            lastName: lastName,
             createdAt: serverTimestamp()
         });
 

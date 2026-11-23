@@ -1,6 +1,6 @@
 import { renderSignupPage, passwordVisibilityToggle} from './signup_UI.js';
 import { createAccount } from './create_account.js';
-import { googleSignIn } from "./signin_gmail.js"
+import { googleSignIn } from "./googleSignin.js"
 export function signupInit() {
 
     renderSignupPage();

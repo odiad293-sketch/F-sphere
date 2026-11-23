@@ -20,7 +20,7 @@ export function renderSignupPage() {
                         person
                     </span>
 
-                    <input type="text" id="name" name="name" placeholder="Enter first name" autocomplete="name"
+                    <input type="text" id="first-name" name="name" placeholder="Enter first name" autocomplete="name"
                         required>
 
                 </div>
@@ -31,7 +31,7 @@ export function renderSignupPage() {
                         person
                     </span>
 
-                    <input type="text" id="name" class="last-name" name="name" placeholder="Enter last name" autocomplete="name"
+                    <input type="text" id="last-name" name="name" placeholder="Enter last name" autocomplete="name"
                         required>
 
                 </div>

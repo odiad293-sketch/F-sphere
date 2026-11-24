@@ -1,16 +1,3 @@
-body {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    font-family: inter, arial;
-    min-width: 350px;
-    width: 100%;
-    margin: 0 auto;
-    color: #02020f;
-    padding: 20px;
-}
-
 main {
     width: 300px;
 }

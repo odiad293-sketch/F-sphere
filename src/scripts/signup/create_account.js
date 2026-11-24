@@ -1,5 +1,5 @@
 
-import { createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/12.18.0/firebase-auth.js';
+import { createUserWithEmailAndPassword, onAuthStateChanged, sendEmailVerification } from 'https://www.gstatic.com/firebasejs/12.18.0/firebase-auth.js';
 
 import {
     setDoc,
@@ -28,7 +28,7 @@ export const createAccount = async () => {
     hideSignupError();
 
     // Validate name
-    if (fistName === "" && lastName === "") {
+    if (fistName === "" || lastName === "") {
         displaySignupError(
             'Name required',
             'Please enter your full name.'
@@ -68,14 +68,37 @@ export const createAccount = async () => {
 
         await setDoc(userRef, {
             email: email,
-            fistName: fistName,
+            firstName: fistName,
             lastName: lastName,
             createdAt: serverTimestamp(),
-            emailVerified: false
+            emailVerified: user.emailVerified
 
         });
+       
+        await sendEmailVerification(user);
+
+        if (user.emailVerified) {
+            //  allow access to the dashboard.
+
+        } else{
+            // redirect to the verification page
+        }
 
         // Further success handling can be added here.
+
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                // User is signed in, see docs for a list of available properties
+                // https://firebase.google.com/docs/reference/js/auth.user
+                const uid = user.uid;
+                // ...
+            } else {
+                // User is signed out
+                // ...
+            }
+        });
+
+
 
     } catch (error) {
         handleSignupError(error, authUserCreated)

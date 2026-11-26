@@ -70,7 +70,7 @@ Installation
 
 1. Clone the repository:
    
-   git clone YOUR_REPOSITORY_URL
+   https://github.com/odiad293-sketch/F-sphere.git
 
 2. Navigate into the project directory:
    

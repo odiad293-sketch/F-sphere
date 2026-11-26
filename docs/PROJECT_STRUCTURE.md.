@@ -1,0 +1,172 @@
+Contributing to Fsphere
+
+Thank you for your interest in contributing to Fsphere!
+
+Fsphere is an open-source community project built to connect frontend developers, encourage knowledge sharing, and promote collaboration.
+
+We welcome developers of different experience levels who are interested in improving the project.
+
+Before contributing, please read these guidelines to understand how we organize development and maintain code quality.
+
+1. Before You Contribute
+
+Before making changes:
+
+- Read the project's "README" (README.md) to understand its purpose and goals.
+- Review the "Project Structure and Architecture" (docs/PROJECT_STRUCTURE.md) documentation.
+- Check existing issues to avoid duplicating ongoing work.
+- If you have a new feature idea or significant change, open an issue first to discuss it.
+
+For major changes, please wait for feedback before beginning implementation.
+
+2. Getting Started
+
+Fork the Repository
+
+Fork the Fsphere repository to your GitHub account.
+
+Clone Your Fork
+
+Clone your forked repository:
+
+git clone YOUR_FORK_URL
+
+Navigate into the project:
+
+cd F-sphere
+
+Create a Branch
+
+Create a separate branch for your contribution:
+
+git checkout -b feature/your-feature-name
+
+Use descriptive branch names.
+
+Examples:
+
+- "feature/user-profile"
+- "feature/community-feed"
+- "fix/authentication-error"
+- "docs/update-readme"
+
+Avoid making changes directly to the main branch.
+
+3. Development Guidelines
+
+All contributions should follow the project's development principles.
+
+Code Organization
+
+- Follow the existing project structure.
+- Keep related functionality organized in appropriate directories.
+- Use JavaScript ES modules where appropriate.
+- Maintain a clear separation of concerns.
+
+Code Reusability
+
+- Avoid unnecessary code duplication.
+- Reuse existing functions and utilities whenever possible.
+- Create shared utilities when functionality needs to be used in multiple places.
+- Avoid implementing the same operation independently across different modules.
+
+Centralized Error Handling
+
+Fsphere uses centralized error-handling utilities.
+
+Contributors should reuse and extend the existing error-handling system where appropriate instead of creating unrelated error handlers for individual features.
+
+Readability and Maintainability
+
+- Use meaningful variable and function names.
+- Write understandable and maintainable code.
+- Keep functions focused on their responsibilities.
+- Avoid unnecessarily complicated implementations.
+- Remove unused code and unnecessary dependencies.
+
+HTML and CSS
+
+- Maintain semantic and accessible HTML.
+- Follow the existing CSS organization.
+- Reuse shared styles where appropriate.
+- Ensure interfaces work on both mobile and desktop screens.
+
+4. AI Usage Policy
+
+AI tools may be used as development assistants.
+
+Acceptable uses include:
+
+- Understanding unfamiliar concepts.
+- Debugging and troubleshooting.
+- Explaining errors.
+- Reviewing code and suggesting improvements.
+- Exploring possible approaches to a problem.
+
+However, contributors are expected to write, understand, and take responsibility for the code they submit.
+
+Do not submit AI-generated implementations that you cannot explain or maintain.
+
+The goal is to encourage actual learning, understanding, and meaningful collaboration.
+
+5. Testing Your Changes
+
+Before submitting a contribution:
+
+- Run the application locally.
+- Check that your changes work as intended.
+- Test relevant existing functionality.
+- Check for errors in the browser console.
+- Ensure your changes do not unnecessarily break existing features.
+
+If automated tests are available for the affected functionality, run them before submitting.
+
+6. Commit Guidelines
+
+Use clear and meaningful commit messages.
+
+Examples:
+
+feat: add user profile interface
+fix: resolve signup validation error
+refactor: centralize authentication errors
+docs: update project structure documentation
+style: improve signup responsiveness
+
+Keep commits focused on related changes.
+
+7. Submitting a Pull Request
+
+When your changes are ready:
+
+1. Commit your changes.
+2. Push your branch to your fork.
+3. Open a Pull Request against the Fsphere repository's main branch.
+4. Provide a clear description of what you changed and why.
+5. Reference any related issues.
+6. Include screenshots when your contribution changes the user interface.
+
+Your Pull Request will be reviewed before it is merged.
+
+Be prepared to answer questions, make requested adjustments, and explain your implementation.
+
+8. Contribution Expectations
+
+All contributors are expected to:
+
+- Respect other contributors.
+- Communicate constructively.
+- Be open to feedback.
+- Follow the project's development guidelines.
+- Avoid unnecessary changes outside the scope of their contribution.
+- Respect the project's purpose and direction.
+
+Contributions may be revised or declined if they do not meet the project's requirements or development standards.
+
+9. Questions and Support
+
+If you have questions about the project, need clarification, or want to discuss a proposed contribution, open an issue in the repository.
+
+Thank you for helping make Fsphere better!
+
+Let's build a better space for frontend developers together.

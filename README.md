@@ -138,7 +138,7 @@ You are free to use, modify, and distribute this software in accordance with the
 
 ## Documentation
 
-- [Project Structure and Architecture](docs/PROJECT_STRUCTURE.md)
+- [Project Structure and Architecture](docs/PROJECT_STRUCTURE.md.)
 - [Contribution Guidelines](CONTRIBUTING.md)
 
 ## License

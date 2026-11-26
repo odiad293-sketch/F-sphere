@@ -42,6 +42,8 @@ async function emailVerification() {
                 "Error",
                 "No authenticated user, please sign in."
             )
+            lodingState(false);
+                return;
             return;
         }
         currentUser = firebaseUser;
@@ -136,8 +138,6 @@ async function emailVerification() {
 
 
     });
-
-    // Check verification status when the user clicks.
 
 }
 

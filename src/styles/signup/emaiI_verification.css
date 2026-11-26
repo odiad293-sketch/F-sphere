@@ -1,5 +1,5 @@
 main {
-    width: 300px;
+    width: 90%;
 }
 
 header {
@@ -9,7 +9,7 @@ header {
     margin-top: 10px;
     align-items: center;
     align-items: center;
-    min-width: 363;
+    min-width: 90px;
 }
 
 .right-side {
@@ -31,6 +31,7 @@ header {
 
 .right-side h1 {
     font-size: 20px;
+    margin-left: -5px;
 }
 
 .button-container {
@@ -101,5 +102,95 @@ header {
     font-weight: 700;
     transition: 0.4s ease;
     box-shadow: 2px 1px 4px #1207b1;
+    transform: scale(0.97);
+}
+
+#hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.email-lcon span {
+    font-size: 150px;
+    color: rgb(12, 12, 85);
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+    width: 90%;
+}
+
+.hero-content span{
+    font-size: medium;
+    font-weight: 700;
+    font-size: 12px;
+    color: green;
+    display: none;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#verified-btn {
+    display: flex;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1207b1;
+    color: white;
+    border: 1px solid #1207b1;
+    width: 100%;
+    padding: 10px 13px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.4s ease;
+    margin-bottom: 10px;
+}
+
+#verified-btn:active {
+    background-color: white;
+    color: #1207b1;
+    transform: scale(0.97);
+}
+
+.requet-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.requet-section span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 10px;
+    color: rgb(66, 66, 64);
+}
+
+.requet-section button {
+    border: none;
+    font-weight: 700;
+    color: #1207b1;
+}
+
+.requet-section button:hover {
+    transform: translateY(-2px);
+}
+
+.requet-section button:active {
     transform: scale(0.97);
 }

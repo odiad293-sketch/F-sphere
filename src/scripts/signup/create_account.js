@@ -1,5 +1,8 @@
 
-import { createUserWithEmailAndPassword, onAuthStateChanged, sendEmailVerification } from 'https://www.gstatic.com/firebasejs/12.18.0/firebase-auth.js';
+import {
+    createUserWithEmailAndPassword,
+    sendEmailVerification,
+} from 'https://www.gstatic.com/firebasejs/12.18.0/firebase-auth.js';
 
 import {
     setDoc,
@@ -50,6 +53,11 @@ export const createAccount = async () => {
 
     let authUserCreated = false;
 
+    const actionCodeSettings = {
+        url: "http://127.0.0.1:5500/src/pages/email_verification.html",
+        handleCodeInApp: false
+    };
+
     try {
 
         // Create Firebase authentication account
@@ -74,30 +82,19 @@ export const createAccount = async () => {
             emailVerified: user.emailVerified
 
         });
-       
-        await sendEmailVerification(user);
 
-        if (user.emailVerified) {
-            //  allow access to the dashboard.
+        await sendEmailVerification(user, actionCodeSettings);
 
-        } else{
-            // redirect to the verification page
-        }
+        // Further success handling can be added here
+                if (user.emailVerified) {
+                    //  allow access to the dashboard.
 
-        // Further success handling can be added here.
 
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-                // User is signed in, see docs for a list of available properties
-                // https://firebase.google.com/docs/reference/js/auth.user
-                const uid = user.uid;
-                // ...
-            } else {
-                // User is signed out
-                // ...
-            }
-        });
-
+                } else {
+                    // redirect to the verification page
+                    window.location.href = "./src/pages/email_verification.html";
+                }
+            
 
 
     } catch (error) {

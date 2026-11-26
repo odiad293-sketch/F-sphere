@@ -31,6 +31,13 @@ export function handleSignupError(error, authUserCreated = false) {
             );
             break;
 
+        case 'auth/too-many-requests':
+            displaySignupError(
+                'Too many attempts',
+                'Too many attempts. Please wait before trying again.'
+            );
+            break;
+
         case 'auth/weak-password':
         case 'auth/password-does-not-meet-requirements':
             displaySignupError(
@@ -104,20 +111,6 @@ export function handleSignupError(error, authUserCreated = false) {
             );
             break;
 
-        case 'auth/too-many-requests':
-            displaySignupError(
-                'Too many attempts',
-                'Too many attempts have been made. Please try again later.'
-            );
-            break;
-
-        case 'auth/user-disabled':
-            displaySignupError(
-                'Account disabled',
-                'This account has been disabled. Please contact support.'
-            );
-            break;
-
         case 'auth/invalid-credential':
             displaySignupError(
                 'Invalid credentials',
@@ -132,6 +125,35 @@ export function handleSignupError(error, authUserCreated = false) {
                 'We could not save your profile because of a database permission issue.'
             );
             break;
+
+        case 'auth/user-disabled':
+            displaySignupError(
+                'Permission denied',
+                'This account is currently disabled.'
+            );
+            break;
+
+        case 'auth/invalid-user-token':
+            displaySignupError(
+                'Permission denied',
+                'Your session has expired. Please sign in again.'
+            );
+            break;
+
+        case 'auth/user-token-expired':
+            displaySignupError(
+                'Permission denied',
+                'Your session has expired. Please sign in again.'
+            );
+            break;
+
+        case 'auth/unauthorized-continue-uri':
+            displaySignupError(
+                'Some thing went wrong',
+                'Verification link configuration error. Please contact support.'
+            );
+            break;
+
 
         case 'unavailable':
             displaySignupError(

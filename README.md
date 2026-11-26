@@ -136,4 +136,12 @@ This project is licensed under the MIT License.
 
 You are free to use, modify, and distribute this software in accordance with the terms of the MIT License.
 
-See the [LICENSE](LICENSE) file for more information.
+## Documentation
+
+- [Project Structure and Architecture](docs/PROJECT_STRUCTURE.md)
+- [Contribution Guidelines](CONTRIBUTING.md)
+
+## License
+
+This project is licensed under the MIT License.
+See the [LICENSE](LICENSE) file for details.
